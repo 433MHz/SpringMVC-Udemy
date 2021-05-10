@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
@@ -20,10 +21,8 @@ public class HelloWorldController {
 	}
 	
 	@RequestMapping("/processFormV2")
-	public String processFormV2(HttpServletRequest request, Model model) {
+	public String processFormV2(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName, Model model) {
 		
-		String firstName = request.getParameter("firstName");
-		String lastName = request.getParameter("lastName");
 		
 		firstName = "Mr " + firstName;
 		
