@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Input name: ${param.name}</h1>
+    <a href="showForm">Back to input</a>
 </body>
 </html>
